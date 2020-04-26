@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+  <head>
+    <meta charset="UTF-8">
+    <title>Growth of Sound Wave</title>
+    <style>
+      body {
+        background-color: #afafaf;
+      }
+      .myCanvas {
+    		position: absolute;
+    		margin: 0;
+    		padding: 0;
+    		left: 0;
+    		top: 0;
+      }
+      #area1 {
+        position: relative;
+    		width: 60px;
+    		height: 100px;
+        padding: 5px;
+      }
+      #area2 {
+        position: relative;
+    		width: 400px;
+    		height: 400px;
+      }
+      #graph1 {
+        background-color: #fffffc;
+      }
+      #graph2 {
+        background-color: #fffffc;
+        padding-left: 100px;
+      }
+
+    </style>
+    <script src="growth_of_soundwave.jsx.js"></script>
+    <script>
+      window.addEventListener("load", function(e) {
+		JSX.require("growth_of_soundwave.jsx").growth_of_soundwave.main$SSSS( "graph1", "graph1b", "graph2", "graph2b" );
+		JSX.require("growth_of_soundwave.jsx").gui.main$SSSS( "start", "stop", "b03", "b05" );
+      });
+    </script>
+  </head>
+  <body>
+  <p>振動源と粒子</p>
+  <div id="area1">
+    <canvas class="myCanvas" id="graph1" width="600" height="100"></canvas>
+    <canvas class="myCanvas" id="graph1b" width="600" height="100"></canvas>
+  </div>
+  <p>音圧</p>
+  <div id="area2">
+    <canvas class="myCanvas" id="graph2" width="450" height="400"></canvas>
+    <canvas class="myCanvas" id="graph2b" width="450" height="400"></canvas>
+  </div>
+  <button type="button" id="start">start</button>
+  <button type="button" id="stop">stop</button>
+  </body>
+</html>
+
